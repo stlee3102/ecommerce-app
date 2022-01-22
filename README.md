@@ -12,7 +12,7 @@ This project utilizes the model–view–controller (MVC) software design patter
 
 There are 3 database tables that we want to model our data over. Each of these tables are represented by a **record item** class to represent individual rows in the table, and a **database** class to support various database operations on the table. All data in the models are read from and written to disk as serialized Java objects. If files on disk does not exist or if data is invalid (serialize version not the same) the code will automatically start a fresh model.
 
-<img src="https://github.com/stlee3102/ecommerce-app/blob/main/screenshots/chart1.png" width="250">
+<img src="https://github.com/stlee3102/ecommerce-app/blob/main/screenshots/chart1.png">
 
 ```mermaid
 classDiagram
@@ -162,7 +162,7 @@ Records the orders made in the system. Each record contains the following inform
 The view is implemented using the Java Swing toolkit. There is also a text version of the UI, which can easily replace the graphical version by changing the instantiation of the initial screen class in the controller. For the scope of this document, only the graphical version is reviewed.
 Since the Swing launches graphic elements on a separate thread, the `main` thread *waits* after launching each window. Once the UI window is complete (user finishes interacting in the window, e.g. clicks a button to advance to next window) the `main` thread *wakes* up to execute the next action (e.g. start the next window).
 
-<img src="https://github.com/stlee3102/ecommerce-app/blob/main/screenshots/chart2.png" width="250">
+<img src="https://github.com/stlee3102/ecommerce-app/blob/main/screenshots/chart2.png">
 
 ```mermaid
 classDiagram
@@ -207,7 +207,7 @@ classDiagram
 
 #### User Experience Flow
 
-<img src="https://github.com/stlee3102/ecommerce-app/blob/main/screenshots/chart3.png" width="250">
+<img src="https://github.com/stlee3102/ecommerce-app/blob/main/screenshots/chart3.png">
 
 ```mermaid
 graph TB
@@ -296,7 +296,7 @@ Upon exiting each window, a `ScreenResponseAction` object gets created and popul
 The main loop and flow control logic is done in this class. Model and UI instantiation are all done within this controller class. Developer can easily switch UI implementation by switching the first screen assignment during initialization.
 For demo purposes, if there is no data present, the controller will execute `populateDemoData` to populate some data.
 
-<img src="https://github.com/stlee3102/ecommerce-app/blob/main/screenshots/chart4.png" width="250">
+<img src="https://github.com/stlee3102/ecommerce-app/blob/main/screenshots/chart4.png">
 
 ```mermaid
 classDiagram
@@ -352,7 +352,7 @@ Contains the *current session's* order info before committing the data to the DB
 
 ### Employee flow
 
-<img src="https://github.com/stlee3102/ecommerce-app/blob/main/screenshots/chart5.png" width="250">
+<img src="https://github.com/stlee3102/ecommerce-app/blob/main/screenshots/chart5.png">
 
 ```mermaid
 sequenceDiagram
@@ -377,7 +377,7 @@ deactivate Details Screen
 
 ### Customer flow
 
-<img src="https://github.com/stlee3102/ecommerce-app/blob/main/screenshots/chart6.png" width="250">
+<img src="https://github.com/stlee3102/ecommerce-app/blob/main/screenshots/chart6.png">
 
 ```mermaid
 sequenceDiagram
